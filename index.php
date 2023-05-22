@@ -1,7 +1,8 @@
 <?php
     
     include __DIR__ . './function.php';
-    
+    session_start();
+    $_SESSION['password'] = randomPassword();
 ?>
 
 <!DOCTYPE html>
@@ -18,14 +19,11 @@
         <h1 class="text-center">Generatore Password</h1>
     </div>
     <div class="container">
-        <form action="index.php" method="GET">
+        <form action="redirect.php" method="GET">
             <label for="">Inserisci la lunghezza della password: </label>
             <input type="number" placeholder="Inserisci numeri..." name="lunghezza">
             <button>Genera password</button>
         </form>
-    </div>
-    <div>
-        <h2><?php echo randomPassword() ?></h2>
     </div>
 </body>
 </html>

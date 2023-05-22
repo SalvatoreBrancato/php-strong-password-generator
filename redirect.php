@@ -1,6 +1,7 @@
 <?php
 session_start();
-
+//include __DIR__ . './function.php';
+var_dump("out".$_SESSION['password']);
 ?>
 
 <!DOCTYPE html>
@@ -14,5 +15,6 @@ session_start();
 <body>
     <h2>La password generata è: </h2>
     <h1><?php echo $_SESSION['password'] ?></h1>
+    <button>Logout</button>
 </body>
 </html>
